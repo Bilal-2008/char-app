@@ -6,7 +6,10 @@ import threading
 ##HOST = '127.0.0.1'
 ##HOST = '109.234.164.138'
 PORT = 13532
-HOST = '172.16.228.170'
+NAME = socket.gethostname()
+print(NAME)
+HOST = socket.gethostbyname(NAME)
+print(HOST)
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
